@@ -1,0 +1,69 @@
+.modal {
+	&:before {
+		content: ""; 
+		display: none;
+		background: rgba(0,0,0,.6);
+		position: fixed;
+		top: 0px; left: 0px; right: 0px; bottom: 0px; 
+		z-index: 10;
+	}
+	&.on {
+		&:before {
+			display: block;
+		}  
+		.modal-dialog {
+			.translate(0, 0);
+			top: 10%;
+		}
+	}
+	.input-field .prefix {
+		~ input,
+		~ textarea {
+			width: 72%;
+			width: calc(80% - 2.5rem);
+		}
+	}
+}
+
+.modal-dialog {
+	position: fixed;
+	z-index: 11;
+	top: -100%;
+	left: 50%;
+	margin-left: -180px;
+	width: 360px;
+	border-radius: 3px;
+	overflow: hidden;
+	background: #fefefe;
+	.translate(0, -500%);
+	.transition-transform(~"0.3s ease-out");
+}
+
+.modal-header {
+	padding: @spacer;
+	background-color: @color-corp-light;
+	h2 {
+		margin: 0px;
+		font-size: 20px;
+	}
+}
+
+.modal-body {
+	padding: @spacer-md @spacer;
+	max-height: 500px;
+	overflow-y: auto;
+}
+
+.btn-close {
+	position: absolute;
+	z-index: 12;
+	top: 0px;
+	right: 0px;
+	color: @color-corp-dark;
+	padding: @spacer @spacer-md;
+	font-size: 26px;
+	text-decoration: none;
+	&:hover {
+		color: #444;
+	}
+}

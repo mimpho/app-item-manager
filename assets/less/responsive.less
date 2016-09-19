@@ -1,0 +1,36 @@
+.container {
+	margin-left: auto;
+	margin-right: auto;
+	width: @screen-md-min;
+	-webkit-transition: width .3s;
+	transition: width .3s;
+}
+@media (min-width: @screen-lg-min) {
+	.item-list:not(.item-list-modal) {
+		.clearfix();
+		margin-left: -@spacer-sm;
+		margin-right: -@spacer-sm;
+		li {
+			float: left;
+			padding-left: @spacer-sm;
+			padding-right: @spacer-sm;
+			width: 50%;
+		}
+	}
+}
+@media (max-width: @screen-md-max) {
+	.container {
+		width: @screen-sm-min;
+	}
+}
+@media (max-width: @screen-sm-max) {
+	.container {
+		width: 100%;
+		padding-left: @spacer;
+		padding-right: @spacer;
+	}
+	.modal.on .modal-dialog {
+		top: @spacer;
+	transition: top .3s;
+	}
+}

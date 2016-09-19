@@ -1,0 +1,55 @@
+.input {
+	padding: 0px;
+	border: none;
+	border-bottom: 2px solid @color-corp-light;
+	border-radius: 0;
+	outline: none;
+	height: 2rem;
+	width: 100%;
+	font-size: 1.3rem;
+	color: #fff;
+	box-shadow: none;
+	//box-sizing: content-box;
+	transition: all 0.3s;
+	background-color: transparent;
+	&:focus {
+		border-bottom-color: #fff;
+	}
+	&.ng-not-empty + label,
+	+ label.active {
+		font-size: 0.8rem;
+		-webkit-transform: translateY(-120%);
+		transform: translateY(-120%);
+		.opacity(.5);
+	}
+}
+
+.input-field {
+	position: relative;
+	.prefix {
+		position: absolute;
+		top: .4em;
+		width: 2.5rem;
+		font-size: 1.1rem;
+	}
+	.prefix {
+		~ label {
+			margin-left: 2.5rem;
+		}
+		~ input,
+		~ textarea {
+			margin-left: 2.5rem;
+			width: 92%;
+			width: calc(100% - 2.5rem);
+		}
+	}
+	label {
+		color: @color-corp-dark;
+		position: absolute;
+		top: 0.5rem;
+		left: 0px;
+		font-size: 1.2rem;
+		cursor: text;
+		transition: .2s ease-out;
+	}
+}

@@ -1,0 +1,48 @@
+<header>
+	<div class="container">
+		<div class="clearfix">
+			<h1 class="header-title">Item manager</h1>
+			<button class="header-fav" ng-click="toggleModal = !toggleModal">
+				<span class="icon-heart"></span>
+			</button>
+		</div>
+		<section class="head">
+			<div class="input-field">
+				<label class="icon-search prefix" for="icon_prefix"></label>
+				<input id="icon_prefix" class="input" type="text" id="query" ng-model="$ctrl.query" ng-focus="$ctrl.toggleInput = !$ctrl.toggleInput" ng-blur="$ctrl.toggleInput = !$ctrl.toggleInput" >
+				<label for="icon_prefix" ng-class="{'active' : $ctrl.toggleInput }">Search items</label>
+			</div>
+			<select class="select" ng-model="$ctrl.orderProp">
+				<option value="title">By title</option>
+				<option value="description">By description</option>
+				<option value="price">By price</option>
+				<option value="email">By email</option>
+			</select>
+		</section>
+	</div>
+</header>
+
+<section class="container">
+	<ul class="item-list">
+		<li ng-repeat="item in $ctrl.items | filter:$ctrl.query | orderBy: $ctrl.orderProp" ng-click="$ctrl.toggleFav(item)">
+			<div class="card">
+				<article class="item">
+					<div class="item-img">
+						<img src="{{item.img}}" alt="{{item.title}}" />
+					</div>
+					<div class="item-fav" ng-class="{active:item.active}">
+						<span class="icon-heart"></span>
+					</div>
+					<div class="item-content">
+						<h2 class="item-title">{{item.title}}</h2>
+						<div class="item-description">{{item.description}}</div>
+						<div class="item-email">{{item.email}}</div>
+						<div class="item-price">{{item.price}} €</div>
+					</div>
+				</article>
+			</div>
+		</li>
+		<button class="item-more" ng-click="$ctrl.pagination()" ng-hide="$ctrl.lastPage">Load more items</button>
+	</ul>
+	<div class="item-empty" ng-show="!(items | filter:$ctrl.query).length">No results for {{query}}</div>
+</section>

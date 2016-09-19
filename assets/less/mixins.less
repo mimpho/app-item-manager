@@ -1,0 +1,83 @@
+/* Clearfix */
+
+.clearfix() {
+  &:before,
+  &:after {
+    content: " "; // 1
+    display: table; // 2
+  }
+  &:after {
+    clear: both;
+  }
+}
+
+/* Opacity */
+
+.opacity(@opacity) {
+  opacity: @opacity;
+  // IE8 filter
+  @opacity-ie: (@opacity * 100);
+  filter: ~"alpha(opacity=@{opacity-ie})";
+}
+
+/* Lines */
+
+.lines(@lines,@lineHeight:1.4em) when (@lines > 1) {
+	@height: @lines * @lineHeight;
+	max-height: @height;
+	line-height: @lineHeight;
+	overflow: hidden;
+}
+.lines(@lines) when (@lines = 0) {
+	height: auto;
+	-webkit-line-clamp: inherit;
+	white-space: inherit;
+}
+.lines(@lines) when (@lines = 1) {
+	white-space: nowrap;
+	display: block;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+.linesfix(@lines,@lineHeight:1.4em) when (@lines > 0) {
+	@height: @lines * @lineHeight;
+	height: @height;
+	line-height: @lineHeight;
+	overflow: hidden;
+}
+
+/* pulse */
+
+.pulse(@count: infinite) {
+	-webkit-animation-name: 'pulse_animation';
+	-webkit-animation-duration: 1500ms;
+	-webkit-transform-origin:70% 70%;
+	-webkit-animation-iteration-count: @count;
+	-webkit-animation-timing-function: linear;
+}
+@-webkit-keyframes pulse_animation {
+	0% { -webkit-transform: scale(1); }
+	10% { -webkit-transform: scale(1.15); }
+	20% { -webkit-transform: scale(1); }
+	40% { -webkit-transform: scale(1); }
+	50% { -webkit-transform: scale(1.12); }
+	60% { -webkit-transform: scale(1); }
+}
+
+/* Transition/Transform */
+
+.translate(@x; @y) {
+  -webkit-transform: translate(@x, @y);
+      -ms-transform: translate(@x, @y); // IE9+
+          transform: translate(@x, @y);
+}
+.transition(@transition) {
+  -webkit-transition: @transition;
+          transition: @transition;
+}
+.transition-transform(@transition) {
+  -webkit-transition: -webkit-transform @transition;
+     -moz-transition: -moz-transform @transition;
+       -o-transition: -o-transform @transition;
+          transition: transform @transition;
+}

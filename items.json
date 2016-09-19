@@ -1,0 +1,183 @@
+[
+	{
+		"img": "assets/img/backpack_1.png",
+		"title": "Mochila",
+		"description": "Increíble mochila a buen precio",
+		"price": 25,
+		"email": "test1@mail.com"
+	},{
+		"img": "assets/img/backpack.jpg",
+		"title": "Mochila",
+		"description": "Para la escuela",
+		"price": 10,
+		"email": "test2@mail.com"
+	},{
+		"img": "assets/img/book.jpg",
+		"title": "Libro",
+		"description": "Libro antiguo",
+		"price": 5,
+		"email": "test3@mail.com"
+	},{
+		"img": "assets/img/boxing_glove.png",
+		"title": "Guantes de boxeo",
+		"description": "Como nuevos, aprovecha esta oferta!!!!!!",
+		"price": 5,
+		"email": "test4@mail.com"
+	},{
+		"img": "assets/img/broadcast.jpg",
+		"title": "Radio vintage",
+		"description": "Radio de los años 50. Como nueva. Funciona.",
+		"price": 35,
+		"email": "test5@mail.com"
+	},{
+		"img": "assets/img/cali-roll.png",
+		"title": "Sushi",
+		"description": "Envío de sushi a domicilio",
+		"price": 0,
+		"email": "test6@mail.com"
+	},{
+		"img": "assets/img/camera-nikon-vintage.jpg",
+		"title": "Cámara Nikon vintage",
+		"description": "Antigua cámara, no funciona.",
+		"price": 20,
+		"email": "test7@mail.com"
+	},{
+		"img": "assets/img/camera-nikon.png",
+		"title": "Cámara nikon",
+		"description": "Nueva a estrenar. La vendo por no usar.",
+		"price": 120,
+		"email": "test8@mail.com"
+	},{
+		"img": "assets/img/chicken-breast.png",
+		"title": "Catering",
+		"description": "Elaboración de platos para catering de empresas y eventos",
+		"price": 0,
+		"email": "test9@mail.com"
+	},{
+		"img": "assets/img/cocktail.png",
+		"title": "Cocktails",
+		"description": "Elaboración de cocktails para empresas y eventos",
+		"price": 0,
+		"email": "test10@mail.com"
+	},{
+		"img": "assets/img/egg.png",
+		"title": "Huevos",
+		"description": "Elaboración de platos para catering de empresas y eventos",
+		"price": 0,
+		"email": "test11@mail.com"
+	},{
+		"img": "assets/img/expresso.png",
+		"title": "Cafetera",
+		"description": "Vendo cafetera profesional bien de precio",
+		"price": 200,
+		"email": "test12@mail.com"
+	},{
+		"img": "assets/img/fishbowl.jpg",
+		"title": "Pecera",
+		"description": "Pecera con poco uso. La vendo por falta de espacio",
+		"price": 15,
+		"email": "test13@mail.com"
+	},{
+		"img": "assets/img/helmet.png",
+		"title": "Artículos de aviación",
+		"description": "Compro todo tipo de artículos de relacionados con la aviación",
+		"price": 0,
+		"email": "test14@mail.com"
+	},{
+		"img": "assets/img/oreo.jpg",
+		"title": "Galletas",
+		"description": "Elaboración de dulces para catering de empresas y eventos",
+		"price": 0,
+		"email": "test15@mail.com"
+	},{
+		"img": "assets/img/pancake.png",
+		"title": "Dulces",
+		"description": "Elaboración de dulces para catering de empresas y eventos",
+		"price": 0,
+		"email": "test16@mail.com"
+	},{
+		"img": "assets/img/radio.jpg",
+		"title": "Radio antigua",
+		"description": "Vendo radio antigua. Con algunos desperfectos pero funcionando",
+		"price": 20,
+		"email": "test17@mail.com"
+	},{
+		"img": "assets/img/soldier.png",
+		"title": "Artículos de aviación",
+		"description": "Compro todo tipo de artículos de relacionados con la aviación",
+		"price": 0,
+		"email": "test18@mail.com"
+	},{
+		"img": "assets/img/steak.png",
+		"title": "Comida",
+		"description": "Elaboración de platos para catering de empresas y eventos",
+		"price": 0,
+		"email": "test19@mail.com"
+	},{
+		"img": "assets/img/swim_shorts.png",
+		"title": "Bañador",
+		"description": "Vendo bañador nuevo a estrenar marca Levi's",
+		"price": 20,
+		"email": "test20@mail.com"
+	},{
+		"img": "assets/img/telly.jpg",
+		"title": "Cámara de vídeo",
+		"description": "Vendo cámara a buen precio. Funciona bien.",
+		"price": 35,
+		"email": "test21@mail.com"
+	},{
+		"img": "assets/img/tennis.png",
+		"title": "Pelotas de tennis",
+		"description": "Las vendo en packs de 3",
+		"price": 8,
+		"email": "test22@mail.com"
+	},{
+		"img": "assets/img/typewriter.jpg",
+		"title": "Máquina de escribir antigua",
+		"description": "Vendo máquina de escribir",
+		"price": 100,
+		"email": "test23@mail.com"
+	},{
+		"img": "assets/img/waffle.png",
+		"title": "Postres",
+		"description": "Elaboración de dulces para catering de empresas y eventos",
+		"price": 0,
+		"email": "test24@mail.com"
+	},{
+		"img": "assets/img/bacon.png",
+		"title": "Comida americana",
+		"description": "Elaboración de comida americana para catering de empresas y eventos",
+		"price": 0,
+		"email": "test25@mail.com"
+	},{
+		"img": "assets/img/camera-eye.png",
+		"title": "Objetivo de cámara",
+		"description": "Vendo objetivo 50mm nuevo a estrenar",
+		"price": 85,
+		"email": "test26@mail.com"
+	},{
+		"img": "assets/img/metalbox.jpg",
+		"title": "Tuppers metálicos",
+		"description": "Vendo set de 5 tuppers metálicos",
+		"price": 15,
+		"email": "test27@mail.com"
+	},{
+		"img": "assets/img/pingpong.jpg",
+		"title": "Ping pong",
+		"description": "Se vende juego de ping pong",
+		"price": 25,
+		"email": "test28@mail.com"
+	},{
+		"img": "assets/img/vhs.jpg",
+		"title": "Cintas VHS",
+		"description": "Vendo 50 cintas de VHS vírgenes",
+		"price": 50,
+		"email": "test29@mail.com"
+	},{
+		"img": "assets/img/home.png",
+		"title": "Decoración",
+		"description": "Decoramos tu casa a partir de 100 €",
+		"price": 100,
+		"email": "test30@mail.com"
+	}
+]

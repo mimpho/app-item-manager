@@ -1,0 +1,42 @@
+/* Media queries breakpoints */
+
+// Extra small screen / phone
+@screen-xs-min:				480px;
+
+// Small screen / tablet
+@screen-sm-min:				768px;
+
+// Medium screen / desktop
+@screen-md-min:				1010px;
+
+// Large screen / wide desktop
+@screen-lg-min:				1280px;
+
+// So media queries don't overlap when required, provide a maximum
+@screen-xs-max:              (@screen-sm-min - 1);
+@screen-sm-max:              (@screen-md-min - 1);
+@screen-md-max:              (@screen-lg-min - 1);
+
+/* Fonts */
+
+@font-title:				"Roboto Condensed", sans-serif;
+@font-content:				Arial, sans-serif;
+
+/* Spacers */
+
+@spacer-xxs:				 2px;
+@spacer-xs:					 5px;
+@spacer-sm:					10px;
+@spacer:					15px;
+@spacer-md:					20px;
+@spacer-lg:					30px;
+@spacer-xl:					50px;
+
+/* Colors */
+
+@color-corp:				#13c1ac;
+@color-corp-light:			lighten(@color-corp, 5%);
+@color-corp-dark:			darken(@color-corp, 10%);
+@color-corp-focus:			darken(@color-corp, 20%);
+@color-fav:					#e45151;
+@color-fav-hover:			lighten(@color-fav, 10%);
