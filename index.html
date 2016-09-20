@@ -8,47 +8,19 @@
 	<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto+Condensed" />
     <link rel="stylesheet" href="assets/css/app.css" />
 	<script src='bower_components/angular/angular.min.js'></script>
+	<script src="bower_components/angular-route/angular-route.min.js"></script>
 	<script src='app.module.js'></script>
+    <script src='favs/favs.module.js'></script>
+    <script src='favs/favs.component.js'></script>
+    <script src='favs/favs.service.js'></script>
     <script src='item-list/item-list.module.js'></script>
     <script src='item-list/item-list.component.js'></script>
 </head>
 
 <body>
 	
-    <!-- Use a custom component to render a list of phones -->
 	<item-list></item-list>
-
-	<div class="modal" ng-class="{'on' : toggleModal }">
-		<div class="modal-dialog">
-			<div class="modal-header">
-				<a href="#close" class="btn-close" aria-hidden="true" ng-click="toggleModal = !toggleModal">×</a>
-				<div class="input-field">
-					<label class="icon-search prefix" for="icon_prefix_modal"></label>
-					<input id="icon_prefix_modal" class="input" type="text" id="queryModal" ng-model="queryModal" ng-focus="toggleInputModal = !toggleInputModal" ng-blur="toggleInputModal = !toggleInputModal" >
-					<label for="icon_prefix_modal" ng-class="{'active' : toggleInputModal }">Favourites</label>
-				</div>
-			</div>
-			<div class="modal-body">
-				<ul class="item-list item-list-modal">
-					<li ng-repeat="favItem in favItems | filter:queryModal | orderBy: orderList" ng-click="toggleFav(favItem)">
-						<article class="item">
-							<div class="item-img">
-								<img src="{{favItem.img}}" alt="{{favItem.title}}" />
-							</div>
-							<div class="item-fav" ng-class="{active:favItem.active}">
-								<span class="icon-heart"></span>
-							</div>
-							<div class="item-content">
-								<h2 class="item-title">{{favItem.title}}</h2>
-							</div>
-						</article>
-					</li>
-					<li class="item-empty" ng-show="(favItems.length && queryModal != null && !(favItems | filter:queryModal).length)">No results for {{queryModal}}</li>
-					<li class="item-empty" ng-show="!(favItems.length)">No favourites</li>
-				</ul>
-			</div>
-		</div>
-	</div>
+	<favs></favs>
 	
 </body>
 </html>

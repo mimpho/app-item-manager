@@ -1,5 +1,7 @@
 'use strict';
 
 angular.module('itemApp', [
-	'itemList'	
+	'ngRoute',
+	'favs',
+	'itemList'
 ]);

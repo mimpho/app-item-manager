@@ -2,9 +2,15 @@
 // Register `phoneList` component, along with its associated controller and template
 angular.
 	module('itemList').
+	config(['$routeProvider', function($routeProvider) {
+		$routeProvider.when('/modalFavs', {
+			templateUrl: 'favs/favs.template.html',
+			controller: 'favs/favsCtrl'
+		});
+	}]).
 	component('itemList', {
 		templateUrl: 'item-list/item-list.template.html',
-		controller: ['$http', 'orderByFilter', function ItemListController($http, orderBy) {
+		controller: ['$http', 'orderByFilter', 'favsService', function ItemListController($http, orderBy, favsService) {
 			var self = this;
 			var page = 5;
 			self.orderProp = 'title';
@@ -26,7 +32,7 @@ angular.
 			});
 
 			self.pagination = function () {
-				
+
  				self.items = self.jsonItems.slice(0,page);
 
 				if (page >= self.jsonItems.length) {
@@ -40,30 +46,8 @@ angular.
 
 			self.favs = function () {
 
-				var favItems = [];
-
 				self.toggleFav = function(item) {
-					var id = item.id;
-					if (item.active) {
-						self.items[id].active = false;
-						// Remove fav
-						for (var i = 0; i < favItems.length; i++) {
-							if (favItems[i].id === id) {
-								favItems.splice(i, 1);
-								break;
-							}
-						}
-					} else {
-						self.items[id].active = true;
-						// Add fav
-						var newItem = {
-							"id": item.id,
-							"title": item.title,
-							"img": item.img,
-							"active": item.active
-						}
-						favItems.push(newItem)
-					}
+					self.items = favsService.init(item, self.items);
 				}
 			}
 
